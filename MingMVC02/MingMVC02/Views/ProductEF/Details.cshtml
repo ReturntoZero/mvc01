@@ -1,0 +1,71 @@
+﻿@model MingMVC02.Models.Table
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>詳細資訊</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <h5>書名：</h5>
+           
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title)
+        </dd>
+
+        <dt>
+            <h5>作者：</h5>
+         
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.author)
+        </dd>
+
+        <dt>
+            <h5>定價：</h5>
+      
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            <h5>ISBN：</h5>
+      
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISBN)
+        </dd>
+
+        <dt>
+            <h5>出版社：</h5>
+      
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.publisher)
+        </dd>
+
+        <dt>
+
+        </dt>
+
+        <dd>
+        <img src="@Url.Content(@Model.images)" alt="@Model.title">
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
